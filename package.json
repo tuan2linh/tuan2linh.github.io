@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "azure-start": "pm2 start process.json --no-daemon"
   },
   "keywords": [],
