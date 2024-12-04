@@ -344,6 +344,30 @@
         document.querySelector('.mobile-menu-button').addEventListener('click', function() {
             document.querySelector('.mobile-menu').classList.toggle('hidden');
         });
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.querySelector('input[placeholder="Name"]').value;
+            const email = document.querySelector('input[placeholder="Email"]').value;
+            const message = document.querySelector('textarea[placeholder="Message"]').value;
+
+            fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                alert('Email sent successfully');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
     </script>
 
     <!-- Add custom animation classes in your CSS -->
@@ -371,4 +395,4 @@
         }
     </style>
 </body>
-</html>  
+</html>
