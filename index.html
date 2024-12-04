@@ -352,7 +352,7 @@
             const email = document.querySelector('input[placeholder="Email"]').value;
             const message = document.querySelector('textarea[placeholder="Message"]').value;
 
-            fetch('http://localhost:3000/send-email', {
+            fetch('https://pizza-dom-store.azurewebsites.net/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
