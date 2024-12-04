@@ -1,33 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Page</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Add new font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>Welcome to My GitHub Page</h1>
-    <p>Hi, I'm a passionate developer!</p>
-  </header>
+<body class="font-['Inter'] bg-slate-50">
+    <!-- Navbar - Enhanced with glass morphism -->
+    <nav id="navbar" class="fixed w-full backdrop-blur-sm transition-all duration-300 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo with animation -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="flex items-center gap-2 group">
+                        <span class="text-2xl font-bold text-white group-hover:scale-105 transition-transform">TL.</span>
+                    </a>
+                </div>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I'm a developer with experience in web and mobile development. I love working with open-source technologies.</p>
-  </section>
+                <!-- Desktop Menu with hover effects -->
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">
+                            Home
+                        </a>
+                        <a href="#about" class="nav-link text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">
+                            About
+                        </a>
+                        <a href="#skills" class="nav-link text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors">
+                            Skills
+                        </a>
+                        <a href="#contact" class="relative overflow-hidden bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all hover:scale-105 hover:shadow-lg">
+                            Contact Me
+                            <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        </a>
+                    </div>
+                </div>
 
-  <section>
-    <h2>My Projects</h2>
-    <ul>
-      <li><a href="https://github.com/username/project1">Project 1</a></li>
-      <li><a href="https://github.com/username/project2">Project 2</a></li>
-      <li><a href="https://github.com/username/project3">Project 3</a></li>
-    </ul>
-  </section>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-button text-white hover:text-blue-300 transition-colors">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
-  <footer>
-    <p>Contact me: <a href="mailto:email@example.com">email@example.com</a></p>
-  </footer>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden bg-white/95 mt-2 rounded-lg shadow-lg">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Enhanced with 3D elements and animations -->
+    <section id="home" class="relative min-h-screen flex items-center bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 px-4">
+        <!-- Enhanced background effects -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-purple-400/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+            <div class="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-cyan-400/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto w-full relative z-10">
+            <div class="text-center space-y-10">
+                <!-- Welcome badge with animation -->
+                <div class="inline-block px-6 py-2 bg-white/10 rounded-full backdrop-blur-md border border-white/10 animate-fade-in-up">
+                    <p class="text-blue-200 font-medium">✨ Welcome to my portfolio</p>
+                </div>
+                
+                <!-- Enhanced heading with gradient -->
+                <h1 class="text-6xl md:text-8xl font-bold text-white leading-tight animate-fade-in-up delay-200">
+                    Hi! I'm<br/>
+                    <span class="bg-gradient-to-r from-blue-200 via-blue-100 to-white text-transparent bg-clip-text hover:scale-105 transition-transform inline-block">
+                        Tuan Linh
+                    </span>
+                </h1>
+                
+                <!-- Typed text with enhanced styling -->
+                <div class="text-3xl md:text-4xl text-blue-100 font-light animate-fade-in-up delay-300">
+                    I'm a <span id="typed-text" class="text-yellow-300 font-semibold"></span>
+                </div>
+
+                <!-- Enhanced description -->
+                <p class="text-blue-100 text-xl max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-400">
+                    A Computer Science student and Full Stack Developer with a passion for building modern web applications and learning new technologies.
+                </p>
+
+                <!-- Enhanced social links -->
+                <div class="flex gap-6 flex-wrap justify-center animate-fade-in-up delay-500">
+                    <a href="https://github.com/tuan2linh" target="_blank" 
+                       class="group px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium backdrop-blur-sm border border-white/10 transition-all hover:scale-105 flex items-center gap-3">
+                        <i class="devicon-github-original text-2xl group-hover:rotate-12 transition-transform"></i>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/linh-ho-tuan-804678294/" target="_blank" class="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium backdrop-blur-sm border border-white/10 transition-all transform hover:scale-105 flex items-center gap-2">
+                            <i class="devicon-linkedin-plain text-xl"></i>
+                            LinkedIn
+                        </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/70 animate-bounce">
+            <span class="text-sm mb-2 tracking-wider">Scroll Down</span>
+            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex items-start p-1">
+                <div class="w-1.5 h-1.5 bg-white/70 rounded-full animate-scroll mx-auto"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-12 md:py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-10 md:mb-16">
+            <span class="px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">About & Education</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">My Journey</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <!-- Left Column - Profile & Info -->
+            <div class="lg:col-span-5 space-y-6 md:space-y-8 lg:sticky lg:top-24">
+                <!-- Profile Image -->
+                <div class="relative">
+                    <div class="bg-gradient-to-tr from-blue-600 to-blue-400 rounded-xl md:rounded-2xl p-2 shadow-xl transform hover:scale-[1.02] transition-transform duration-300">
+                        <img src="https://th.bing.com/th/id/R.3acddd96809373e254a8e6a0b5939754?rik=CfHBzmOotm%2fhog&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f5%2fUser-Profile-PNG-Free-Download.png&ehk=Y4PdD7AE%2fHJpnZsPko97b8LANnHWtZJ1GIfmuNyuY2M%3d&risl=&pid=ImgRaw&r=0" 
+                             alt="Profile Image" 
+                             class="rounded-lg md:rounded-xl w-full h-[300px] md:h-[400px] object-cover">
+                    </div>
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-4 -right-4 w-16 md:w-24 h-16 md:h-24 bg-yellow-400/20 rounded-full blur-2xl"></div>
+                    <div class="absolute -bottom-4 -left-4 w-24 md:w-32 h-24 md:h-32 bg-blue-400/20 rounded-full blur-2xl"></div>
+                </div>
+
+                <!-- Quick Info -->
+                <div class="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                    <div class="space-y-4">
+                        <h3 class="text-lg md:text-xl font-semibold text-gray-800">Quick Info</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-blue-50 rounded-lg">
+                                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Full Name</p>
+                                    <p class="font-medium text-gray-800">Tuan Linh</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-blue-50 rounded-lg">
+                                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Role</p>
+                                    <p class="font-medium text-gray-800">Computer Science Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Education & Details -->
+            <div class="lg:col-span-7 space-y-6 md:space-y-8">
+                <!-- About Text -->
+                <div class="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">About Me</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                        As a Computer Science student at HCMUT-VNU, I combine theoretical knowledge with practical development skills. My passion lies in creating efficient, user-friendly web applications and solving complex problems through code.
+                    </p>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+
+                    <!-- Education Item -->
+                    <div class="relative pl-10 md:pl-12 pb-8">
+                        <div class="absolute left-2 -translate-x-1/2 w-5 md:w-6 h-5 md:h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                        <div class="bg-white rounded-lg md:rounded-xl shadow-lg p-4 md:p-6 hover:shadow-xl transition-shadow">
+                            <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+                                <img src="https://th.bing.com/th/id/OIP.mlwvJzxCmWBPahzho2o74QHaHe?rs=1&pid=ImgDetMain" 
+                                     alt="HCMUT Logo" 
+                                     class="w-12 md:w-16 h-12 md:h-16 object-contain">
+                                <div>
+                                    <h4 class="text-base md:text-lg font-semibold text-gray-800">Ho Chi Minh City University of Technology</h4>
+                                    <p class="text-blue-600 text-sm md:text-base">Bachelor of Engineering</p>
+                                    <p class="text-xs md:text-sm text-gray-500">2022 - Present</p>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <p class="text-gray-600 text-sm md:text-base">Computer Science and Engineering</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 md:px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs md:text-sm">Data Structures</span>
+                                    <span class="px-2 md:px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs md:text-sm">Algorithms</span>
+                                    <span class="px-2 md:px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs md:text-sm">Software Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="skills" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:-translate-y-2 transition-transform">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">Frontend</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="p-2 border-b flex items-center">
+                            <i class="devicon-javascript-plain colored mr-2 text-xl"></i>JavaScript/TypeScript
+                        </li>
+                        <li class="p-2 border-b flex items-center">
+                            <i class="devicon-react-original colored mr-2 text-xl"></i>React.js
+                        </li>
+                        <li class="p-2 border-b flex items-center">
+                            <i class="devicon-vuejs-plain colored mr-2 text-xl"></i>Vue.js
+                        </li>
+                        <li class="p-2 flex items-center">
+                            <i class="devicon-html5-plain colored mr-2 text-xl"></i>HTML5/CSS3
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:-translate-y-2 transition-transform">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">Backend</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="p-2 border-b flex items-center">
+                            <i class="devicon-nodejs-plain colored mr-2 text-xl"></i>Node.js
+                        </li>
+                        <li class="p-2 border-b flex items-center">
+                            <i class="devicon-python-plain colored mr-2 text-xl"></i>Python
+                        </li>
+                        <li class="p-2 border-b flex items-center">
+                            <i class="devicon-mysql-plain colored mr-2 text-xl"></i>SQL/NoSQL
+                        </li>
+                        <li class="p-2 flex items-center">
+                            <i class="devicon-express-original colored mr-2 text-xl"></i>RESTful APIs
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:-translate-y-2 transition-transform">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">Tools & Others</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="p-2 border-b flex items-center">
+                            <i class="devicon-git-plain colored mr-2 text-xl"></i>Git/GitHub
+                        </li>
+                        <li class="p-2 border-b flex items-center">
+                            <i class="devicon-docker-plain colored mr-2 text-xl"></i>Docker
+                        </li>
+                        <li class="p-2 border-b flex items-center">
+                            <i class="devicon-amazonwebservices-original colored mr-2 text-xl"></i>AWS
+                        </li>
+                        <li class="p-2 flex items-center">
+                            <i class="devicon-jira-plain colored mr-2 text-xl"></i>Agile/Scrum
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Name" required
+                    class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="email" placeholder="Email" required
+                    class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <textarea placeholder="Message" required
+                    class="w-full p-3 border rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-slate-800 text-white py-8 text-center">
+        <p>&copy; 2023 Your Name | Full Stack Developer</p>
+    </footer>
+
+    <script>
+        new Typed('#typed-text', {
+            strings: [
+                'Computer Science Student',
+                'Software Engineering',
+                'Web Developer',
+                'Problem Solver'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/95', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+                // Change text color on scroll
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-700');
+                });
+            } else {
+                navbar.classList.remove('bg-white/95', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+                // Revert text color
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-700');
+                });
+            }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Add custom animation classes in your CSS -->
+    <style>
+        @keyframes scroll {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(20px); opacity: 0; }
+        }
+        .animate-scroll {
+            animation: scroll 1.5s infinite;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </body>
-</html>
+</html>  
