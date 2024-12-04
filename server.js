@@ -3,8 +3,17 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const helmet = require('helmet');
+const compression = require('compression');
+const morgan = require('morgan');
 
 const app = express();
+
+// Security and optimization middleware
+app.use(helmet());
+app.use(compression());
+app.use(morgan('combined'));
+
 app.use(bodyParser.json());
 app.use(cors());
 
